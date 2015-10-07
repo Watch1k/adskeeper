@@ -1,0 +1,498 @@
+// fonts
++font("Roboto Black", roboto-black-webfont)
++font("Roboto Medium", roboto-medium-webfont)
++font("Roboto Light", roboto-light-webfont)
+$default-fonts: Arial, sans-serif
+$roboto-b: Roboto Black, $default-fonts
+$roboto-m: Roboto Medium, $default-fonts
+$roboto-l: Roboto Light, $default-fonts
+
+// colors
+$blue: #2C73A9
+
+/*-------------------------------------------------------------------------*/
+/*----------------------------- MAIN STYLES -------------------------------*/
+/*-------------------------------------------------------------------------*/
+a:hover, a:focus
+	text-decoration: none
+a
+	color: inherit
+svg
+	width: 100%
+	height: 100%
+body
+	min-width: 320px
+	font-family: $roboto-l
+	font-size: 16px
+	line-height: 1.42857
+	+r(360)
+		line-height: 1.1
+.container
+	max-width: 960px
+	// height: 100%
+	margin: 0 auto
+	padding: 0 10px
+	+r(320)
+		padding: 0 5px
+.row
+	+pie-clearfix
+.header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	height: 49px
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)
+	background-color: #fff
+.footer
+	position: absolute
+	z-index: 100
+	bottom: 0
+	left: 0
+	border-style: outset
+	width: 100%
+	height: 49px
+	font-family: $roboto-l
+	font-size: 14px
+	color: #222
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)
+	background-color: #fff
+	text-align: center
+	span
+		line-height: 49px
+.join-btn
+	position: fixed
+	z-index: 99
+	right: 50%
+	margin-right: -80px
+	bottom: 0
+	width: 160px
+	height: 48px
+	font-family: $roboto-b
+	font-size: 24px
+	color: #fff
+	line-height: 48px
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+	background-color: #222
+	opacity: 0
+	transition: all 0.4s
+	&.is-active
+		opacity: 1
+		transition: all 0.4s
+#menu_toggle
+	display: none
+	float: left
+	position: relative
+	overflow: hidden
+	margin-top: 12px
+	width: 24px
+	height: 24px
+	font-size: 0
+	text-indent: -9999px
+	appearance: none
+	background-color: transparent
+	cursor: pointer
+	transition: background 0.3s
+	transition: margin 0.2s
+	+r(850)
+		display: block
+	span
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		height: 2px
+		background: #222
+		transition: background 0s 0.3s
+		&:before, &:after
+			position: absolute
+			display: block
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: #222
+			content: ""
+			transition-duration: 0.3s, 0.3s
+			transition-delay: 0.3s, 0s
+		&:before
+			top: -7px
+			transition-property: top, transform
+		&:after
+			bottom: -7px
+			transition-property: bottom, transform
+	&.is-active
+		background-color: transparent
+		span
+			background: none
+			&:before
+				top: 0
+				transform: rotate(45deg)
+			&:after
+				bottom: 0
+				transform: rotate(-45deg)
+			&:before, &:after
+				transition-delay: 0s, 0.3s
+/* Backgrounds */
+.section.el-1
+	background-image: url("../img/backgrounds/bg-main.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-2
+	background-image: url("../img/backgrounds/bg-zero.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-3
+	background-image: url("../img/backgrounds/bg-advertise_1.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-4
+	background-image: url("../img/backgrounds/bg-zero.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-5
+	background-image: url("../img/backgrounds/bg-advertise_3.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-6
+	background-image: url("../img/backgrounds/bg-zero.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-7
+	background-image: url("../img/backgrounds/bg-monetize_1.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-8
+	background-image: url("../img/backgrounds/bg-zero.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-9
+	background-image: url("../img/backgrounds/bg-monetize_3.jpg")
+	background-position: center center
+	background-size: cover
+.section.el-10
+	background-image: url("../img/backgrounds/bg-zero.jpg")
+	background-position: center center
+	background-size: cover
+/* Main Navigation */
+.nav-main
+	display: block
+	float: left
+	+pie-clearfix
+	li
+		float: left
+		a
+			display: block
+			padding: 0 20px
+			color: #222
+			line-height: 49px
+			text-decoration: none
+			transition: all 0.2s
+			&:hover, &:active
+				color: #fff
+				background-color: $blue
+				transition: all 0.2s
+		&.is-active
+			a
+				color: #fff
+				background-color: $blue
+				transition: all 0.2s
+	+r(850)
+		display: none
+		position: absolute
+		top: 50px
+		left: 0
+		width: 100%
+		background-color: #fff
+		text-align: center
+		li
+			float: none
+			+ li
+				border-top: 1px solid #222
+				border-bottom: 1px solid #555
+.logo
+	position: absolute
+	z-index: 101
+	top: 0
+	left: 50%
+	margin-left: -89px
+	width: 178px
+	height: 49px
+	text-align: center
+	background: url("../img/logo.png") no-repeat center center
+	a
+		overflow: hidden
+		display: block
+		height: 100%
+		text-indent: -9999px
+		text-decoration: none
+	+r(620)
+		left: 100px
+		margin-left: 0
+	+r(480)
+		left: 50px
+.login-btn
+	float: right
+	margin-top: 8px
+	padding: 0 40px
+	height: 32px
+	font-family: $roboto-b
+	color: #fff
+	line-height: 32px
+	background-color: #222
+	text-transform: uppercase
+	text-decoration: none
+	transition: all 0.2s
+	&:hover, &:active
+		background-color: $blue
+		transition: all 0.2s
+	+r(420)
+		padding: 0 20px
+	+r(360)
+		padding: 0 10px
+		font-size: 14px
+.text-large
+	font-size: 24px
+	line-height: 32px
+	+r(650)
+		font-size: 20px
+		line-height: 26px
+	+r(400)
+		font-size: 16px
+.text-medium
+	font-size: 18px
+	line-height: 24px
+	+r(650)
+		font-size: 16px
+		line-height: 22px
+	+r(320)
+		font-size: 14px
+.text-large, .text-medium
+	padding: 0 20px
+	font-family: $roboto-m
+	color: #fff
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
+	+r(480)
+		padding: 0 5px
+.section
+	text-align: center
+	&-title
+		font-family: $roboto-b
+		font-size: 60px
+		color: #fff
+		letter-spacing: 0.025em
+		text-transform: uppercase
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
+		+r(1300)
+			font-size: 48px
+		+r(960)
+			font-size: 42px
+		+r(480)
+			font-size: 24px
+	&.el-1
+		.key-wrap
+			margin-top: 100px
+			+r(1280)
+				margin-top: 50px
+			+r(360)
+				margin-top: 20px
+		.key-col
+			position: relative
+			z-index: 10
+			float: left
+			padding: 135px 10px 0
+			width: 50%
+			text-decoration: none
+			span
+				font-size: 48px
+				color: #fff
+				text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
+			+r(480)
+				width: 100%
+				padding-top: 0
+			&:hover
+				.key-hover-item
+					opacity: 1
+					transition: all 0.2s
+		.key-item
+			position: absolute
+			top: 25px
+			left: 50%
+			margin-left: -21px
+			width: 42px
+			height: 80px
+			background: url("../img/key.png") no-repeat center center
+			+r(480)
+				display: none
+		.key-hover-item
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -120px
+			width: 121px
+			height: 94px
+			background: url("../img/key-hover.png") no-repeat center center
+			opacity: 0
+			transition: all 0.2s
+			+r(480)
+				display: none
+	&.el-2
+		img
+			margin-top: 75px
+			max-width: 100%
+			vertical-align: middle
+		+r(1300)
+			img
+				max-width: 50%
+		.text-medium
+			margin-top: 50px
+	&.el-3
+		img
+			margin: 45px 0
+			max-width: 100%
+			vertical-align: middle
+		+r(1300)
+			img
+				max-width: 50%
+	&.el-4
+		img
+			margin: 25px 0
+			max-width: 100%
+			vertical-align: middle
+		+r(1300)
+			img
+				max-width: 50%
+	&.el-7
+		img
+			margin: 45px 0
+			max-width: 100%
+			vertical-align: middle
+		+r(1300)
+			img
+				max-width: 50%
+	&.el-8
+		.widget-wrapper
+			margin: 25px auto
+			> img
+				max-width: 100%
+			+r(1300)
+				max-width: 60%
+			+r(720)
+				max-width: 100%
+.monetize__list, .advertise__list
+	margin-top: 100px
+	li
+		padding-left: 50px
+		text-align: left
+		background: url("../img/icon-check.png") no-repeat center left
+		min-height: 31px
+		+ li
+			margin-top: 50px
+			+r(1300)
+				margin-top: 40px
+			+r(400)
+				margin-top: 25px
+	+r(1300)
+		margin-top: 50px
+	+r(400)
+		margin-top: 30px
+.advertise__list
+	margin-left: 30%
+	+r(860)
+		margin-left: 25%
+	+r(640)
+		margin-left: 10%
+	+r(600)
+		margin-left: 0
+.monetize__list
+	margin-left: 20%
+	+r(860)
+		margin-left: 15%
+	+r(640)
+		margin-left: 10%
+	+r(600)
+		margin-left: 0
+.subscribe-form
+	overflow: hidden
+	margin: 50px auto 0
+	padding: 24px
+	max-width: 348px
+	background-color: #fff
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)
+	.form-input
+		width: auto
+		height: 48px
+		width: 100%
+		font-family: $roboto-l
+		font-size: 18px
+		color: #444
+		line-height: 48px
+		text-align: center
+		background-color: #f9f9f9
+		border: 1px solid #d8d8d8
+		vertical-align: middle
+		+placeholder-color(#444)
+		+r(1300)
+			height: 30px
+			line-height: 30px
+	.field
+		+ .field
+			margin-top: 18px
+	.submit-btn
+		width: auto
+		height: 48px
+		width: 100%
+		font-family: $roboto-b
+		font-size: 24px
+		color: #fff
+		line-height: 48px
+		text-transform: uppercase
+		text-align: center
+		background-color: #222
+		transition: all 0.2s
+		&:hover, &:active
+			background-color: $blue
+			transition: all 0.2s
+		+r(1300)
+			height: 30px
+			line-height: 30px
+	+r(1300)
+		margin-top: 25px
+.traffic__list
+	margin: 75px 0
+	+pie-clearfix
+	li
+		float: left
+		width: 33.33%
+		padding: 100px 10px 0
+		font-family: $roboto-m
+		font-size: 16px
+		color: #fff
+		text-transform: uppercase
+		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
+		background: url("../img/icon_macros.png") no-repeat top center
+		+r(320)
+			padding-top: 0
+			background: none
+		+ li
+			background: url("../img/icon_retargeting.png") no-repeat top center
+			+r(320)
+				background: none
+			+ li
+				background: url("../img/icon_bidding.png") no-repeat top center
+				+r(320)
+					background: none
+		+r(360)
+			font-size: 12px
+	+r(1300)
+		margin: 35px 0
+/* if fullpage disabled */
+.fullpage.fp-responsive
+	.section
+		padding-top: 75px
+		padding-bottom: 75px
+.testik
+	border-radius: 4px
