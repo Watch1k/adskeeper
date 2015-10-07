@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     iconfont = require("gulp-iconfont"),
     consolidate = require("gulp-consolidate"),
     rimraf = require('rimraf'),
+    htmlhint = require("gulp-htmlhint"),
     reload = browserSync.reload;
 
 // IE 8 opacity
@@ -54,7 +55,6 @@ gulp.task('sass', function() {
     ];
 
     return sass('src/sass/*.sass', {
-        sourcemap: true,
         style: 'compact'
     })
     .on('error', function (err) {
@@ -88,6 +88,8 @@ gulp.task('sprite', function() {
 gulp.task('html', function () {
     gulp.src('src/*.html')
         .pipe(rigger())
+        .pipe(htmlhint())
+        .pipe(htmlhint.reporter())
         .pipe(gulp.dest('site/'))
         .pipe(reload({stream: true}));
 });
