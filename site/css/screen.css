@@ -237,3 +237,4 @@ body { min-width: 320px; font-family: Roboto Light, Arial, sans-serif; font-size
 
 .mobile.landscape .section { padding-top: 25px; padding-bottom: 25px; }
 .mobile.landscape .section:first-child { padding-top: 75px; }
+.mobile.landscape .section:last-child { padding-bottom: 75px; }
