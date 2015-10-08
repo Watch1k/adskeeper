@@ -108,7 +108,7 @@ gulp.task('copy', function() {
    gulp.src('src/fonts/*.*')
    .pipe(gulp.dest('site/css/fonts/'));
    gulp.src('src/css/*.*')
-   .pipe(gulp.dest('site/css/'));
+   .pipe(gulp.dest('site/css/lib/'));
    gulp.src('src/video/*.*')
    .pipe(gulp.dest('site/video/'));
 });

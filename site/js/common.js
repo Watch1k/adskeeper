@@ -13,7 +13,6 @@ head.ready(function(){
 	$('.fullpage').fullpage({
 		// verticalCentered: false,
 		// normalScrollElements: '.section',
-		responsiveHeight: 420,
 		onLeave: function(index, nextIndex, direction) {
 			// show active menu
 			if (nextIndex > 2 && nextIndex < 7) {
@@ -38,6 +37,26 @@ head.ready(function(){
 				}
 			}
 		}
+	});
+
+	// disable fullpage.js if mobile landscape
+	function disableFullpage () {
+		if (head.mobile && head.landscape) {
+			$.fn.fullpage.setAutoScrolling(false);
+			$.fn.fullpage.setFitToSection(false);
+			console.log("false");
+		} else {
+			$.fn.fullpage.setAutoScrolling(true);
+			$.fn.fullpage.setFitToSection(true);
+			console.log("true");
+		}
+	}
+	disableFullpage();
+	$(window).resize(function(){
+		console.log("fine");
+		setTimeout(function(){
+			disableFullpage();
+		}, 100);
 	});
 
 // Navigation
