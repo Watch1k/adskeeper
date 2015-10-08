@@ -46,7 +46,7 @@ var dest = {
 
 
 
-//sass
+// sass
 gulp.task('sass', function() {
 
     var processors = [
@@ -63,7 +63,6 @@ gulp.task('sass', function() {
     .pipe(postcss(processors))
     .pipe(gulp.dest('site/css/'));
 });
-
 
 // sprite
 gulp.task('sprite', function() {
@@ -113,6 +112,7 @@ gulp.task('copy', function() {
    .pipe(gulp.dest('site/video/'));
 });
 
+// delete app
 gulp.task('delete', function (cb) {
     rimraf('./site', cb);
 });
@@ -157,9 +157,6 @@ gulp.task('font', function(){
     .pipe(gulp.dest('site/css/fonts/'))
     .pipe(reload({stream: true}));
 });
-
-
-
 
 //webserver
 gulp.task('browser-sync', function() {
