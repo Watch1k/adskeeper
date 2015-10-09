@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     consolidate = require("gulp-consolidate"),
     rimraf = require('rimraf'),
     htmlhint = require("gulp-htmlhint"),
+    cmq = require('gulp-combine-mq'),
     reload = browserSync.reload;
 
 // IE 8 opacity
@@ -61,6 +62,7 @@ gulp.task('sass', function() {
       console.error('Error', err.message);
     })
     .pipe(postcss(processors))
+    .pipe(cmq())
     .pipe(gulp.dest('site/css/'));
 });
 
