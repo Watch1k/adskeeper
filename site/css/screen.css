@@ -122,7 +122,7 @@ body { min-width: 320px; font-family: Roboto Light, Arial, sans-serif; font-size
 .section { text-align: center; }
 .section-title { font-family: Roboto Black, Arial, sans-serif; font-size: 60px; color: #fff; letter-spacing: 0.025em; text-transform: uppercase; text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8); }
 @media only screen and (max-width: 1300px) { .section-title { font-size: 48px; } }
-@media only screen and (max-width: 960px) { .section-title { font-size: 42px; } }
+@media only screen and (max-width: 960px) { .section-title { font-size: 42px; line-height: 1.2; } }
 @media only screen and (max-width: 480px) { .section-title { font-size: 24px; } }
 .section.el-1 .key-wrap { margin-top: 100px; }
 @media only screen and (max-width: 1280px) { .section.el-1 .key-wrap { margin-top: 50px; } }
