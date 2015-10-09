@@ -57,6 +57,8 @@ table {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -101,6 +103,8 @@ body {
   left: 0;
   width: 100%;
   height: 49px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   background-color: #fff;
 }
@@ -116,6 +120,8 @@ body {
   font-family: Roboto Light, Arial, sans-serif;
   font-size: 14px;
   color: #222;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   background-color: #fff;
   text-align: center;
@@ -144,6 +150,8 @@ body {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -151,6 +159,8 @@ body {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -170,8 +180,12 @@ body {
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
   transition: background 0.3s;
   -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
   transition: margin 0.2s;
 }
 
@@ -184,6 +198,8 @@ body {
   height: 2px;
   background: #222;
   -webkit-transition: background 0s 0.3s;
+  -moz-transition: background 0s 0.3s;
+  -o-transition: background 0s 0.3s;
   transition: background 0s 0.3s;
 }
 
@@ -196,20 +212,28 @@ body {
   background-color: #222;
   content: "";
   -webkit-transition-duration: 0.3s, 0.3s;
+  -moz-transition-duration: 0.3s, 0.3s;
+  -o-transition-duration: 0.3s, 0.3s;
   transition-duration: 0.3s, 0.3s;
   -webkit-transition-delay: 0.3s, 0s;
+  -moz-transition-delay: 0.3s, 0s;
+  -o-transition-delay: 0.3s, 0s;
   transition-delay: 0.3s, 0s;
 }
 
 #menu_toggle span:before {
   top: -7px;
   -webkit-transition-property: top, -webkit-transform;
+  -moz-transition-property: top, -moz-transform;
+  -o-transition-property: top, -o-transform;
   transition-property: top, transform;
 }
 
 #menu_toggle span:after {
   bottom: -7px;
   -webkit-transition-property: bottom, -webkit-transform;
+  -moz-transition-property: bottom, -moz-transform;
+  -o-transition-property: bottom, -o-transform;
   transition-property: bottom, transform;
 }
 
@@ -224,77 +248,103 @@ body {
 #menu_toggle.is-active span:before {
   top: 0;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 #menu_toggle.is-active span:after {
   bottom: 0;
   -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 #menu_toggle.is-active span:before,#menu_toggle.is-active span:after {
   -webkit-transition-delay: 0s, 0.3s;
+  -moz-transition-delay: 0s, 0.3s;
+  -o-transition-delay: 0s, 0.3s;
   transition-delay: 0s, 0.3s;
 }/* Backgrounds */.section.el-1 {
   background-image: url("../img/backgrounds/bg-main.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-2 {
   background-image: url("../img/backgrounds/bg-zero.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-3 {
   background-image: url("../img/backgrounds/bg-advertise_1.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-4 {
   background-image: url("../img/backgrounds/bg-zero.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-5 {
   background-image: url("../img/backgrounds/bg-advertise_3.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-6 {
   background-image: url("../img/backgrounds/bg-zero.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-7 {
   background-image: url("../img/backgrounds/bg-monetize_1.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-8 {
   background-image: url("../img/backgrounds/bg-zero.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-9 {
   background-image: url("../img/backgrounds/bg-monetize_3.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
 .section.el-10 {
   background-image: url("../img/backgrounds/bg-zero.jpg");
   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }/* Main Navigation */.nav-main {
   display: block;
@@ -318,6 +368,8 @@ body {
   line-height: 49px;
   text-decoration: none;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -325,6 +377,8 @@ body {
   color: #fff;
   background-color: #2C73A9;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -332,6 +386,8 @@ body {
   color: #fff;
   background-color: #2C73A9;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -367,12 +423,16 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .login-btn:hover,.login-btn:active {
   background-color: #2C73A9;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -429,6 +489,8 @@ body {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -453,6 +515,8 @@ body {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -521,6 +585,8 @@ body {
   padding: 24px;
   max-width: 348px;
   background-color: #fff;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -564,12 +630,16 @@ body {
   text-align: center;
   background-color: #222;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .subscribe-form .submit-btn:hover,.subscribe-form .submit-btn:active {
   background-color: #2C73A9;
   -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -607,6 +677,8 @@ body {
 }
 
 .testik {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 

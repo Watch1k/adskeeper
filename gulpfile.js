@@ -52,7 +52,7 @@ gulp.task('sass', function() {
 
     var processors = [
         opacity,
-        autoprefixer({cascade: false})
+        autoprefixer({browsers: ['last 100 versions'],cascade: false})
     ];
 
     return sass('src/sass/*.sass', {
