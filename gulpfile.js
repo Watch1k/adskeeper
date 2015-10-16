@@ -165,7 +165,7 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: dest.root,
-            // directory: true,
+            directory: true,
             // index: 'index.html'
         },
         files: [dest.html + '/*.html', dest.css + '/*.css', dest.js + '/*.js'],

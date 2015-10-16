@@ -693,6 +693,55 @@ body {
 
 .mobile.landscape .section:last-child {
   padding-bottom: 75px;
+}/*------------------------------------------------------------------------- *//*----------------------------- Page 500 ---------------------------------- *//*------------------------------------------------------------------------- */.ads500__wrap {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fafafa;
+  text-align: center;
+  background-color: #282828;
+  font-size: 0;
+}
+
+.ads500__wrap:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.ads500 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.ads500 .logo__error {
+  display: inline-block;
+  position: relative;
+  left: -20px;
+}
+
+.ads500 h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.ads500 p {
+  margin: 0 auto;
+  width: 60%;
+  font-size: 15px;
+  line-height: 25px;
+}/* Mobile Landscape */.mobile.landscape .ads500 .logo__error {
+  display: inline-block;
+  position: relative;
+  left: -20px;
 }
 
 @font-face {
@@ -765,10 +814,26 @@ body {
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .mobile.landscape .ads500 .logo__error img {
+    max-width: 80%;
+  }
+}
+
 @media only screen and (max-width: 960px) {
   .section-title {
     font-size: 42px;
     line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ads500 h1 {
+    margin-top: 20px;
+  }
+
+  .mobile.landscape .ads500 .logo__error img {
+    max-width: 50%;
   }
 }
 
@@ -817,6 +882,17 @@ body {
   .section.el-8 .widget-wrapper {
     max-width: 100%;
   }
+
+  .mobile.landscape .ads500 h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .ads500 p {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -845,6 +921,13 @@ body {
 
   .monetize__list {
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ads500 p {
+    width: auto;
+    padding: 0 10px;
   }
 }
 
@@ -878,6 +961,14 @@ body {
 
   .section.el-1 .key-hover-item {
     display: none;
+  }
+
+  .ads500 .logo__error img {
+    max-width: 75%;
+  }
+
+  .ads500 h1 {
+    font-size: 30px;
   }
 }
 
@@ -944,5 +1035,13 @@ body {
 
   .traffic__list li + li + li {
     background: none;
+  }
+
+  .ads500 .logo__error {
+    left: -10px;
+  }
+
+  .ads500 h1 {
+    font-size: 24px;
   }
 }
